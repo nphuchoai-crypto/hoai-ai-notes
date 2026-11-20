@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Nhật ký học AI của nphuchoai</title>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>A blog built with Quarto</description>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Thu, 19 Nov 2026 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Post With Code</title>
+  <dc:creator>Harlow Malloc</dc:creator>
+  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is a post with executable code.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
+  <media:content url="https://your-website-url.example.com/posts/post-with-code/image.jpg" medium="image" type="image/jpeg" height="96" width="144"/>
+</item>
+<item>
+  <title>Setup Quarto cho việc viết blog về AI</title>
+  <dc:creator>Nguyen Phuc Hoai</dc:creator>
+  <link>https://your-website-url.example.com/posts/quarto-setup-blog/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Đây là blog đầu tiên về cách thiết lập quarto và ghi nhật kí về quá trình học AI</p>
+<section id="vì-sao-tôi-viết-blog-này" class="level2">
+<h2 class="anchored" data-anchor-id="vì-sao-tôi-viết-blog-này">Vì sao tôi viết blog này?</h2>
+<ul>
+<li>Ví dụ cụ thể về tính hữu ích của viết blog là Christopher Olah, đồng sáng lập của Anthropic. Ông đã viết blog thường xuyên về các kiến thức về AI và mạng neuron Qua blog có thể chứng minh được năng lực và khả năng suy nghĩ, kiến thức của ông. Đây sẽ là casestudy của mình về việc blog.</li>
+<li>Qua việc tạo một blog riêng bằng quarto tạo ra nơi lưu trữ và ghi chép, cách giải các bài toán về AI. Nơi lưu trữ những kiến thức về AI và các codebase của mình để push lên github và sau này sẽ là portfolio của mình.</li>
+</ul>
+</section>
+<section id="hôm-nay-tôi-học-được-gì" class="level2">
+<h2 class="anchored" data-anchor-id="hôm-nay-tôi-học-được-gì">Hôm nay tôi học được gì?</h2>
+<ul>
+<li><code>.venv</code> là môi trường ảo của Python dành cho một project cụ thể. Khi tạo một blog bằng quarto và viết nhật kí học tập AI bằng Python thì nên tách bạch venv thành 2 môi trường riêng biệt. Một là dành cho Hoccode và một cho việc viết blog.</li>
+<li>Lợi ích của việc tạo <code>.venv</code> riêng là khi cài bất kì thư viện nào bên blog cũng sẽ không ảnh hưởng đến <code>.venv</code> của Hoccode và ngược lại.</li>
+<li>Cách tắt <code>.venv</code> bằng lệnh là <code>deactivate</code> và lệnh <code>cd ..</code> là lùi lại 1 cấp của thư mục.</li>
+<li>Kích hoạt môi trường ảo là lệnh <code>source .venv/bin/activate</code></li>
+<li>File <code>index.qmd</code> ở thư mục gốc là file trang chủ đầu tiên chứa ít nội dung gồm listing chứa: contents: posts (tự động liệt kê mọi bài viết trong thư mục posts/).</li>
+<li>File <code>index.qmd</code> trong thư mục bài viết chứa front matter (hoặc metadata) gồm title, author, date, categories, image.</li>
+<li>File <code>image.jpg</code> là file nằm trong các thư mục bài viết riêng, có hình ảnh của các bài viết đó.</li>
+</ul>
+</section>
+<section id="quá-trình-tư-duy" class="level2">
+<h2 class="anchored" data-anchor-id="quá-trình-tư-duy">Quá trình tư duy</h2>
+<p>Ví dụ về lỗi no metadata trong Quarto</p>
+<pre><code>WARN: File /Users/nguyenphuchoai/Desktop/hoai-ai-notes/posts/quarto-setup-blog/index.qmd in the listing 'listing' contains no metadata.
+
+WARN: Unable to read listing item description from posts/quarto-setup-blog/index.html
+WARN: Unable to read listing preview image from posts/quarto-setup-blog/index.html</code></pre>
+<p>Đầu tiên mình nghĩ lỗi là ở file <code>index.qmd</code> vì mình chưa lưu file hoặc là lỗi ở cú pháp của mình. Nhưng khi kiểm tra kỹ thì không có vấn đề gì.<br>
+Nên sau khi mình chạy lệnh <code>quarto preview</code> thì thấy chỉ render 2 file và không có file <code>posts/quarto-setup-blog/index.html</code>, do file này chưa được tạo ra.<br>
+Lí do: vì <code>quarto preview</code> chỉ render những trang đang mở hoặc vừa sửa chứ không render lại cả blog nên dẫn đến lỗi file còn trống khi preview.</p>
+<p>Cách sửa:&nbsp;</p>
+<ul>
+<li><ol type="1">
+<li>Dùng Ctrl + C để dừng preview.<br>
+</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Render toàn bộ blog một lần bằng lệnh <code>quarto render</code> sau đó chạy lại <code>quarto preview</code> thì đã sửa xong.</li>
+</ol></li>
+</ul>
+</section>
+<section id="kết-nối-với-kiến-thức-cũ" class="level2">
+<h2 class="anchored" data-anchor-id="kết-nối-với-kiến-thức-cũ">Kết nối với kiến thức cũ</h2>
+<ul>
+<li>Tạo môi trường ảo cho python bằng <code>.venv</code> và tạo cách tạo Folder, file</li>
+<li>Cách đọc lỗi và hướng khắc phục lỗi. Ví dụ là <code>quarto check</code> , <code>quarto render</code></li>
+<li>Thụt lề trong YAML giống với thụt lề trong function của Python.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>quarto</category>
+  <category>blog</category>
+  <guid>https://your-website-url.example.com/posts/quarto-setup-blog/</guid>
+  <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <dc:creator>Tristan O&#39;Malley</dc:creator>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
