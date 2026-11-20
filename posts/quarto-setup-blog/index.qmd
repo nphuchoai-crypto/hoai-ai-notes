@@ -1,0 +1,46 @@
+---
+title: "Setup Quarto cho việc viết blog về AI"
+author: "Nguyen Phuc Hoai"
+date: "2026-11-20"
+categories: [quarto, blog]
+---
+Đây là blog đầu tiên về cách thiết lập quarto và ghi nhật kí về quá trình học AI
+
+## Vì sao tôi viết blog này?
+- Ví dụ cụ thể về tính hữu ích của viết blog là Christopher Olah, đồng sáng lập của Anthropic. Ông đã viết blog thường xuyên về các kiến thức về AI và mạng neuron
+Qua blog có thể chứng minh được năng lực và khả năng suy nghĩ, kiến thức của ông. Đây sẽ là casestudy của mình về việc blog.
+- Qua việc tạo một blog riêng bằng quarto tạo ra nơi lưu trữ và ghi chép, cách giải các bài toán về AI. 
+Nơi lưu trữ những kiến thức về AI và các codebase của mình để push lên github và sau này sẽ là portfolio của mình.
+
+## Hôm nay tôi học được gì?
+- `.venv` là môi trường ảo của Python dành cho một project cụ thể. Khi tạo một blog bằng quarto và viết nhật kí học tập AI
+bằng Python thì nên tách bạch venv thành 2 môi trường riêng biệt. Một là dành cho Hoccode và một cho việc viết blog.
+- Lợi ích của việc tạo `.venv` riêng là khi cài bất kì thư viện nào bên blog cũng sẽ không ảnh hưởng đến `.venv` của Hoccode và ngược lại.
+- Cách tắt `.venv` bằng lệnh là `deactivate` và lệnh `cd ..` là lùi lại 1 cấp của thư mục. 
+- Kích hoạt môi trường ảo là lệnh `source .venv/bin/activate`
+- File `index.qmd` ở thư mục gốc là file trang chủ đầu tiên chứa ít nội dung gồm listing chứa: contents: posts (tự động liệt kê mọi bài viết trong thư mục posts/).
+- File `index.qmd` trong thư mục bài viết chứa front matter (hoặc metadata) gồm title, author, date, categories, image.
+- File `image.jpg` là file  nằm trong các thư mục bài viết riêng, có hình ảnh của các bài viết đó.
+
+## Quá trình tư duy
+Ví dụ về lỗi no metadata trong Quarto
+```
+WARN: File /Users/nguyenphuchoai/Desktop/hoai-ai-notes/posts/quarto-setup-blog/index.qmd in the listing 'listing' contains no metadata.
+
+WARN: Unable to read listing item description from posts/quarto-setup-blog/index.html
+WARN: Unable to read listing preview image from posts/quarto-setup-blog/index.html
+```
+
+Đầu tiên mình nghĩ lỗi là ở file `index.qmd` vì mình chưa lưu file hoặc là lỗi ở cú pháp của mình. Nhưng khi kiểm tra kỹ thì không có vấn đề gì.\
+Nên sau khi mình chạy lệnh `quarto preview` thì thấy chỉ render 2 file và không có file `posts/quarto-setup-blog/index.html`, do file này chưa được tạo ra.\
+Lí do: vì `quarto preview` chỉ render những trang đang mở hoặc vừa sửa chứ không render lại cả blog nên dẫn đến lỗi file còn trống khi preview.
+
+Cách sửa:\ 
+
+- 1. Dùng Ctrl + C để dừng preview.\
+- 2. Render toàn bộ blog một lần bằng lệnh `quarto render` sau đó chạy lại `quarto preview` thì đã sửa xong.
+
+## Kết nối với kiến thức cũ
+- Tạo môi trường ảo cho python bằng `.venv` và tạo cách tạo Folder, file 
+- Cách đọc lỗi và hướng khắc phục lỗi. Ví dụ là `quarto check` , `quarto render`
+- Thụt lề trong YAML giống với thụt lề trong function của Python. 
