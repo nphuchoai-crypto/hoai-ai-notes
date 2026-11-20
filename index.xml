@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Nhật ký học AI của nphuchoai</title>
-<link>https://your-website-url.example.com/</link>
-<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://nphuchoai-crypto.github.io/hoai-ai-notes/</link>
+<atom:link href="https://nphuchoai-crypto.github.io/hoai-ai-notes/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.11.9</generator>
 <lastBuildDate>Thu, 19 Nov 2026 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Post With Code</title>
   <dc:creator>Harlow Malloc</dc:creator>
-  <link>https://your-website-url.example.com/posts/post-with-code/</link>
+  <link>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/post-with-code/</link>
   <description><![CDATA[ 
 
 
@@ -29,14 +29,14 @@
   <category>news</category>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://your-website-url.example.com/posts/post-with-code/</guid>
+  <guid>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/post-with-code/</guid>
   <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/post-with-code/image.jpg" medium="image" type="image/jpeg" height="96" width="144"/>
+  <media:content url="https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/post-with-code/image.jpg" medium="image" type="image/jpeg" height="96" width="144"/>
 </item>
 <item>
   <title>Setup Quarto cho việc viết blog về AI</title>
   <dc:creator>Nguyen Phuc Hoai</dc:creator>
-  <link>https://your-website-url.example.com/posts/quarto-setup-blog/</link>
+  <link>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/quarto-setup-blog/</link>
   <description><![CDATA[ 
 
 
@@ -98,13 +98,13 @@ Lí do: vì <code>quarto preview</code> chỉ render những trang đang mở ho
  ]]></description>
   <category>quarto</category>
   <category>blog</category>
-  <guid>https://your-website-url.example.com/posts/quarto-setup-blog/</guid>
+  <guid>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/quarto-setup-blog/</guid>
   <pubDate>Thu, 19 Nov 2026 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Welcome To My Blog</title>
   <dc:creator>Tristan O&#39;Malley</dc:creator>
-  <link>https://your-website-url.example.com/posts/welcome/</link>
+  <link>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -112,14 +112,14 @@ Lí do: vì <code>quarto preview</code> chỉ render những trang đang mở ho
 
 
 <p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p><img src="https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
 <p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <guid>https://nphuchoai-crypto.github.io/hoai-ai-notes/posts/welcome/</guid>
   <pubDate>Mon, 16 Nov 2026 15:00:00 GMT</pubDate>
 </item>
 </channel>
